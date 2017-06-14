@@ -20,6 +20,9 @@
 		CD0F82A21EEF7BAE00FCC6B7 /* ZJCommonAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0F82941EEF7BAE00FCC6B7 /* ZJCommonAlertView.m */; };
 		CD0F82A31EEF7BAE00FCC6B7 /* ZJAlertBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0F82971EEF7BAE00FCC6B7 /* ZJAlertBuilder.m */; };
 		CD0F82A61EEF90C100FCC6B7 /* UIButton+ZJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0F82A51EEF90C100FCC6B7 /* UIButton+ZJExtension.m */; };
+		CD3B74431EF1559800BE9018 /* ZJCenterViewControllerAnimatedTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = CD3B74401EF1559800BE9018 /* ZJCenterViewControllerAnimatedTransitioning.m */; };
+		CD3B74441EF1559800BE9018 /* ZJTransitioningDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CD3B74421EF1559800BE9018 /* ZJTransitioningDelegate.m */; };
+		CD3B74471EF155A900BE9018 /* ZJUpDownViewControllerAnimatedTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = CD3B74461EF155A900BE9018 /* ZJUpDownViewControllerAnimatedTransitioning.m */; };
 		CD9852C31EE637750095EC53 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9852C21EE637750095EC53 /* main.m */; };
 		CD9852C61EE637750095EC53 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9852C51EE637750095EC53 /* AppDelegate.m */; };
 		CD9852C91EE637750095EC53 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9852C81EE637750095EC53 /* ViewController.m */; };
@@ -54,6 +57,13 @@
 		CD0F82971EEF7BAE00FCC6B7 /* ZJAlertBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJAlertBuilder.m; sourceTree = "<group>"; };
 		CD0F82A41EEF90C100FCC6B7 /* UIButton+ZJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ZJExtension.h"; sourceTree = "<group>"; };
 		CD0F82A51EEF90C100FCC6B7 /* UIButton+ZJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ZJExtension.m"; sourceTree = "<group>"; };
+		CD3B742C1EF13BB300BE9018 /* ZJAlertControllerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJAlertControllerProtocol.h; sourceTree = "<group>"; };
+		CD3B743F1EF1559800BE9018 /* ZJCenterViewControllerAnimatedTransitioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJCenterViewControllerAnimatedTransitioning.h; sourceTree = "<group>"; };
+		CD3B74401EF1559800BE9018 /* ZJCenterViewControllerAnimatedTransitioning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJCenterViewControllerAnimatedTransitioning.m; sourceTree = "<group>"; };
+		CD3B74411EF1559800BE9018 /* ZJTransitioningDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJTransitioningDelegate.h; sourceTree = "<group>"; };
+		CD3B74421EF1559800BE9018 /* ZJTransitioningDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJTransitioningDelegate.m; sourceTree = "<group>"; };
+		CD3B74451EF155A900BE9018 /* ZJUpDownViewControllerAnimatedTransitioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJUpDownViewControllerAnimatedTransitioning.h; sourceTree = "<group>"; };
+		CD3B74461EF155A900BE9018 /* ZJUpDownViewControllerAnimatedTransitioning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJUpDownViewControllerAnimatedTransitioning.m; sourceTree = "<group>"; };
 		CD9852BE1EE637750095EC53 /* 构建者模式的自定义alert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "构建者模式的自定义alert.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD9852C21EE637750095EC53 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CD9852C41EE637750095EC53 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -123,6 +133,7 @@
 				CD0F82801EEF7BAE00FCC6B7 /* ZJAlertEngine.h */,
 				CD0F82811EEF7BAE00FCC6B7 /* ZJAlertEngine.m */,
 				CD0F82821EEF7BAE00FCC6B7 /* ZJAlertFactoryProtocol.h */,
+				CD3B742C1EF13BB300BE9018 /* ZJAlertControllerProtocol.h */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -150,6 +161,7 @@
 		CD0F82881EEF7BAE00FCC6B7 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				CD3B743E1EF1559800BE9018 /* Transition */,
 				CD0F82A41EEF90C100FCC6B7 /* UIButton+ZJExtension.h */,
 				CD0F82A51EEF90C100FCC6B7 /* UIButton+ZJExtension.m */,
 				CD0F82891EEF7BAE00FCC6B7 /* NSString+AutoCountLabelSize.h */,
@@ -188,6 +200,19 @@
 				CD0F82971EEF7BAE00FCC6B7 /* ZJAlertBuilder.m */,
 			);
 			path = ZJUIAertBuilder;
+			sourceTree = "<group>";
+		};
+		CD3B743E1EF1559800BE9018 /* Transition */ = {
+			isa = PBXGroup;
+			children = (
+				CD3B74451EF155A900BE9018 /* ZJUpDownViewControllerAnimatedTransitioning.h */,
+				CD3B74461EF155A900BE9018 /* ZJUpDownViewControllerAnimatedTransitioning.m */,
+				CD3B743F1EF1559800BE9018 /* ZJCenterViewControllerAnimatedTransitioning.h */,
+				CD3B74401EF1559800BE9018 /* ZJCenterViewControllerAnimatedTransitioning.m */,
+				CD3B74411EF1559800BE9018 /* ZJTransitioningDelegate.h */,
+				CD3B74421EF1559800BE9018 /* ZJTransitioningDelegate.m */,
+			);
+			path = Transition;
 			sourceTree = "<group>";
 		};
 		CD9852B51EE637750095EC53 = {
@@ -310,6 +335,7 @@
 				CD0F829E1EEF7BAE00FCC6B7 /* NSString+AutoCountLabelSize.m in Sources */,
 				CD0F82981EEF7BAE00FCC6B7 /* ZJCustomerAlertBuilder.m in Sources */,
 				CD0F82A21EEF7BAE00FCC6B7 /* ZJCommonAlertView.m in Sources */,
+				CD3B74471EF155A900BE9018 /* ZJUpDownViewControllerAnimatedTransitioning.m in Sources */,
 				CD0F82A31EEF7BAE00FCC6B7 /* ZJAlertBuilder.m in Sources */,
 				CD9852C91EE637750095EC53 /* ViewController.m in Sources */,
 				CD0F829F1EEF7BAE00FCC6B7 /* ZJAlertComponentFrameTool.m in Sources */,
@@ -317,7 +343,9 @@
 				CD0F82991EEF7BAE00FCC6B7 /* ZJCustomerAlertBuilderParams.m in Sources */,
 				CD0F82A01EEF7BAE00FCC6B7 /* ZJCommonAlertController.m in Sources */,
 				CD9852C61EE637750095EC53 /* AppDelegate.m in Sources */,
+				CD3B74431EF1559800BE9018 /* ZJCenterViewControllerAnimatedTransitioning.m in Sources */,
 				CD0F82A11EEF7BAE00FCC6B7 /* ZJCommonAlertFactory.m in Sources */,
+				CD3B74441EF1559800BE9018 /* ZJTransitioningDelegate.m in Sources */,
 				CD0F829A1EEF7BAE00FCC6B7 /* ZJAlertEngine.m in Sources */,
 				CD9852EB1EE6D5100095EC53 /* ViewController2.m in Sources */,
 				CD9852C31EE637750095EC53 /* main.m in Sources */,

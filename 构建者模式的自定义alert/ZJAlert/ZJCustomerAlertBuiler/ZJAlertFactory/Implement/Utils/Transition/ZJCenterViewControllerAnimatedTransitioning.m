@@ -4,7 +4,7 @@
 //
 //  Created by jiale on 2017/6/14.
 //  Copyright © 2017年 jiale. All rights reserved.
-//
+//  remark:present的时候alertController是destination  dismiss的时候alertController是source
 
 #import "ZJCenterViewControllerAnimatedTransitioning.h"
 
@@ -16,7 +16,7 @@
     if (destination.isBeingPresented) {
         return 0.3;
     }
-    else if (destination.isBeingDismissed) {
+    else if (source.isBeingDismissed) {
         return 0.1;
     }
     return 0.3;
@@ -25,7 +25,7 @@
 - (void)animateTransition:(id <UIViewControllerContextTransitioning>)transitionContext
 {
     UIViewController<ZJAlertControllerProtocol> *destination = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
-    UIViewController *source = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
+    UIViewController<ZJAlertControllerProtocol> *source = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
     if (!destination || !source) {
         return;
     }
@@ -49,7 +49,7 @@
     else if (source.isBeingDismissed) {
         // 3
         [UIView animateWithDuration:duration animations:^{
-            source.view.alpha = 0.0;
+            source.getCover.alpha = 0.0;
         } completion:^(BOOL finished) {
             [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
         }];

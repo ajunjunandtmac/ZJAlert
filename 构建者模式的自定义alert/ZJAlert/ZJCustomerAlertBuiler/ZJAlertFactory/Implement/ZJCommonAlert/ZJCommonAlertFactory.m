@@ -26,4 +26,5 @@
 {
     return _commonAlertController;
 }
+
 @end

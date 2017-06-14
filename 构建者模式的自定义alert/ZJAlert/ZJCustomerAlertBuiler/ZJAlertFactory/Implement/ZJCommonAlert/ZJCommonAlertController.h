@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "ZJAlertFactoryProtocol.h"
+
 @interface ZJCommonAlertController : UIViewController
 - (instancetype)initWithParams:(ZJCustomerAlertBuilderParams *)params;
 @end

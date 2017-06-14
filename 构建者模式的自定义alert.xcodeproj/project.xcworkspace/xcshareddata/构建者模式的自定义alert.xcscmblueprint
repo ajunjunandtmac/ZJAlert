@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "2BF098627A6BDB658D68926AB9BC8613A9266870",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "15617BB3D14D7C44CAD7BB531E2D9431E2F445D9" : 9223372036854775807,
+    "2BF098627A6BDB658D68926AB9BC8613A9266870" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "64410E07-F882-4C37-B75C-B5C6199416A6",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "15617BB3D14D7C44CAD7BB531E2D9431E2F445D9" : "",
+    "2BF098627A6BDB658D68926AB9BC8613A9266870" : "ZJAlert\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "构建者模式的自定义alert",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "构建者模式的自定义alert.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ajunjunandtmac\/ZJAlert.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "15617BB3D14D7C44CAD7BB531E2D9431E2F445D9"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ajunjunandtmac\/ZJAlert.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "2BF098627A6BDB658D68926AB9BC8613A9266870"
+    }
+  ]
+}

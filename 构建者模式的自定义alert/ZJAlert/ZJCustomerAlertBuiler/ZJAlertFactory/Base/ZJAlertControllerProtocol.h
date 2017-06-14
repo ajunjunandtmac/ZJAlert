@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import <UIKit/UIKit.h>
 @protocol ZJAlertControllerProtocol <NSObject>
-
+- (UIView *)getCover;
+- (UIView *)getContentView;
 @end

@@ -9,12 +9,15 @@
 #import "ZJCommonAlertController.h"
 #import "ZJCommonAlertView.h"
 #import "ZJAlertComponentFrameTool.h"
-@interface ZJCommonAlertController ()<ZJCommonAlertViewDelegate>
+#import "ZJAlertControllerProtocol.h"
+#import "ZJTransitioningDelegate.h"
+@interface ZJCommonAlertController ()<ZJCommonAlertViewDelegate,ZJAlertControllerProtocol>
 @property(nonatomic,strong)ZJCustomerAlertBuilderParams *params;
 @property(nonatomic,weak)UIImageView *backgroundImageView;
 @property(nonatomic,weak)ZJCommonAlertView *alert;
 @property(nonatomic,assign)CGFloat alertMoveDistanceWhenKeyboardShow;
 @property(nonatomic,assign)CGFloat animateDuration;
+@property(nonatomic,weak)UIView *cover;
 @end
 
 @implementation ZJCommonAlertController
@@ -23,15 +26,28 @@
     self = [super init];
     if (self) {
         _params = params;
-        self.modalPresentationStyle = UIModalPresentationOverCurrentContext;
-        self.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;//前一画面逐渐消失的同时，后一画面逐渐显示
+        //self.modalPresentationStyle = UIModalPresentationOverCurrentContext;
+        //self.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;//前一画面逐渐消失的同时，后一画面逐渐显示
+        self.modalPresentationStyle = UIModalPresentationCustom;
+        self.transitioningDelegate = [ZJTransitioningDelegate delegate];
     }
     return self;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self commonInitCover];
     [self commonInitContentView];
+}
+
+- (void)commonInitCover
+{
+    UIView *cover = [UIView new];
+    cover.backgroundColor = [UIColor blackColor];
+    cover.alpha = 0.0f;
+    [self.view addSubview:cover];
+    cover.frame = self.view.bounds;
+    _cover = cover;
 }
 
 - (void)commonInitContentView
@@ -54,7 +70,7 @@
 #pragma mark - ZJCommonAlertViewDelegate
 - (void)ZJCommonAlertView:(UIView *)alertView didClickCancelBtn:(UIButton *)sender
 {
-    [self dismissViewControllerAnimated:false completion:^{
+    [self dismissViewControllerAnimated:YES completion:^{
         if (_params.cancelActionHandler) {
             _params.cancelActionHandler();
         }
@@ -64,7 +80,7 @@
 
 - (void)ZJCommonAlertView:(UIView *)alertView didClickConfirmBtn:(UIButton *)sender
 {
-    [self dismissViewControllerAnimated:false completion:^{
+    [self dismissViewControllerAnimated:YES completion:^{
         if (_params.confirmActionHandler) {
             _params.confirmActionHandler(_params.inputText);
         }
@@ -98,5 +114,14 @@
     }];
 }
 
+#pragma mark - ZJAlertControllerProtocol
+- (UIView *)getCover
+{
+    return _cover;
+}
 
+- (UIView *)getContentView
+{
+    return _alert;
+}
 @end
